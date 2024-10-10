@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof LP1</title>
+</head>
+<style>
+    /* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 6px; /* Updated for consistency */
+}
+
+.logo {
+    width: 7%;
+}
+
+.advertorial {
+    font-size: 1.5rem; /* Using rem for better scalability */
+    color: #999;
+}
+
+/* Button Styling */
+.cta-button {
+    background-color: #d42f2f; /* Red background color */
+    color: white; /* White text color */
+    font-size: 1.5rem; /* Responsive font size */
+    padding: 15px 30px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-weight: 600; /* Semi-bold font weight */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width button */
+    max-width: 500px; /* Limit the max width */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center the text */
+    width: 100%;
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+}
+
+.footer-content {
+    max-width: 1200px; /* Limit the max width */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.875rem; /* Font size for the copyright */
+}
+
+.footer-links {
+    margin-top: 10px; /* Space between text and links */
+}
+
+.footer-links a {
+    color: #bbb; /* Lighter color for the links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between the links */
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Change to white on hover */
+}
+
+/* Hover Effect */
+.cta-button:hover {
+    background-color: #c1272d; /* Darker red on hover */
+}
+
+/* Background Image Section */
+.background-image {
+    background-image: url(images/home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the background fills the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px; /* Adds padding to avoid content hitting the edges on small screens */
+}
+
+/* Promo Box Styling */
+.promo-box {
+    background-color: white;
+    padding: 50px;
+    border-radius: 37px 13px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 650px;
+    width: 70%; /* Ensures the promo box doesn't exceed the container */
+    height: auto; /* Removes any fixed height so it adjusts based on content */
+    margin: 20px; /* Adds margin so it's not tight against the edges */
+    margin-left: 30%;
+}
+
+.headTitle {
+    font-size: 2rem; /* Responsive font size */
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.promo-box p {
+    font-size: 1.25rem; /* Responsive font size */
+    margin: 10px 0 15px;
+    color: #000;
+}
+
+.subheading {
+    font-size: 25px; /* Responsive font size */
+    font-weight: 400;
+    color: #333;
+    padding: 0px 62px 0px 62px;
+}
+
+.promo-box button {
+    background-color: rgb(41, 92, 162);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.25rem; /* Responsive font size */
+    width: 85%;
+    margin-top: 20px;
+}
+
+.promo-box button:hover {
+    background-color: #0056b3;
+}
+
+.trust-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trust-info img {
+    width: 60%;
+}
+
+.trust-info p {
+    font-size: 1rem; /* Responsive font size */
+    color: #000;
+}
+
+/* Adjust for responsive design */
+@media (max-width: 768px) {
+    .background-image {
+        background-image: none; /* Hide background image */
+        padding: 0; /* Remove padding if it causes space */
+        margin: 0; /* Ensure no margin issues */
+        min-height: 10vh; /* Ensures the background fills the full viewport height */
+        /* height: auto; Adjust height to fit content */
+    }
+    .second .subheading {
+        font-size: 21px; /* Responsive font size */
+        font-weight: 400;
+        color: #333;
+        padding: 0px 30px 0px 30px;
+    }
+    
+    .trust-info img {
+        width: 80%;
+    }
+.logo{
+    width: 20%;
+    display: block;
+    margin: 0 ;
+}
+.advertorial{
+    font-size: 0.875rem; /* Responsive font size */
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+.promo-box {
+        padding: 10px; /* Decrease padding on smaller screens */
+        /* max-width: 90%; Make the promo box wider on smaller screens */
+        margin: 10px; /* Reduce margin */
+        width: 100%;
+        margin-top: 0; /* Remove top margin to reduce the gap */
+        padding-top: 10px; 
+        border-top: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0;
+        border-radius: 0px;
+        box-shadow: none;
+        
+
+    }
+
+    .headTitle {
+        font-size: 2rem; /* Decrease font size for smaller screens */
+        font-weight: 800;
+    }
+
+    .promo-box p {
+        font-size: 1rem; /* Decrease font size */
+    }
+
+    .promo-box button {
+        font-size: 1rem; /* Decrease font size */
+        height: auto;
+    }
+
+    .trust-info p {
+        font-size: 1rem; /* Decrease font size */
+    }
+    .header {
+        margin-bottom: 0; /* Remove or reduce bottom margin to close the gap */
+        padding-bottom: 10px; /
+    }
+    
+
+    .advertorial {
+        font-size: 0.875rem; /* Responsive font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .headTitle {
+        font-size: 2rem; /* Decrease font size */
+    }
+
+    .promo-box p {
+        font-size: 20px; /* Decrease font size */
+    }
+
+    .promo-box button {
+        font-size: 1rem; /* Decrease font size */
+        height: 2%;
+    }
+
+    .trust-info p {
+        font-size: 0.9rem; /* Decrease font size */
+    }
+    .trust-info img {
+        width: 90%;
+    }
+
+    .header {
+        padding: 8px; /* Consistent padding */
+    }
+    .subheading {
+        font-size: 30px; /* Responsive font size */
+        font-weight: 400;
+        color: #333;
+    }
+
+    .advertorial {
+        font-size: 0.75rem; /* Decrease font size */
+    }
+}
+
+/* Container and text section styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-section {
+    background-color: rgb(226, 240, 255);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-section p,
+.additional-info {
+    line-height: 1.9;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.highlight {
+    color: red;
+    text-decoration: underline;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.roof-image {
+    width: 90%;
+    height: auto;
+}
+
+.benefits {
+    color: rgb(0, 45, 108);
+    line-height: 41px;
+    font-size: 2rem; /* Responsive font size */
+}
+
+</style>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <img src="images/logo.png" alt="American Homes Logo" class="logo">
+        <span class="advertorial">Advertorial</span>
+    </header>
+    <div class="background-image">
+        <!-- Promotional Box Content -->
+        <div class="promo-box">
+            <div class="heading">
+                <p><span class="headTitle">NEW 2024</span><br>
+                <span class="headTitle">Roof Replacement Saving Program</span> </p>           </div>
+            <div class="second">
+                <p class="subheading">Helps US Homeowners Get New Energy Efficient Roof</p><br><br><br>
+                <p>Find out <strong>within 90 seconds</strong> if you qualify for a brand new roof on the next page...</p>
+                <button style="height: 100%;"><strong>CHECK MY ZIP CODE NOW &gt;&gt;</strong></button>
+                <div class="trust-info">
+                    <img class="review" src="images/reviewsimg.jfif" alt="Trustpilot">
+                    <p><strong>Rated 4.9/5</strong> by thousands of happy homeowners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="container" style="max-width: 1000px; margin-top: 30px;">
+        <div class="text-section">
+            <p>This is the one simple thing most roofing companies don’t want you to do. Did you know, if you own your home and your <span class="highlight">roof</span> is more than 7 years old, then you could get significant savings on a <span class="highlight">brand new roof</span>?</p>     
+        </div>
+        <p class="additional-info">What’s more, if your roof has sustained any sort of storm or water damage in recent times, then taking this one simple step could save you a bunch of stress and money.</p>
+        
+        <div class="image-section">
+            <img src="images/beforeafter.jpg" alt="Roof Before and After" class="roof-image" style="margin-top: 30px;">
+        </div>
+<br><br>
+        <span class="benefits" style="margin-top: 20px; font-family: 'Poppins', sans-serif;
+ ;" >Replacing Your Roof Can Increase Your Home's Value, Your Comfort, and Save You $$ On Energy Costs</span><br><br>
+        
+        <p style="font-size: 20px; line-height: 1.9;"><strong style="color: rgb(0, 45, 108);">Let’s face it:</strong> you wouldn't book a flight without first comparing multiple airlines for the best prices and discounts. The same should be said for replacing your roof.</p>
+       <br>
+        <p style="font-size: 20px;">The truth is many homeowners are missing out on incredible savings, simply by not getting multiple quotes for their roof replacement.<br><br>Thankfully, that's all about to change.</p>
+    <div class="image-section">
+        <img src="images/roof.jpg" alt="Roof Before and After" class="roof-image" style="margin-top: 30px;">
+    </div>
+    <span class="benefits" style="margin-top: 30px; font-family: 'Poppins', sans-serif; text-align: center; display: block;">Replacing Your Roof Used To Be Difficult and Expensive But Not Anymore!</span><br><br>
+    <p style="font-size: 20px; line-height: 1.9;">When homeowners visit this website, they are surprised to find out how affordable it is to replace their roof with brand new, durable materials. This easy-to-use website compares discounts and quotes from hundreds of local roofing companies with just one click of a button. This means you can get top deals on high-quality, sturdy, and safe roofing materials! </p>
+   <br><br>
+   <p style="font-size: 20px; line-height: 1.9;">What’s even better, these new roofs not only save you money on energy, but they also significantly increase the value and curb appeal of your home!  </p>
+   <br><br>
+   <p style="font-size: 20px; line-height: 1.9;">We thank them for providing such an amazing service with an honest effort to save money for families across America. Simply take a few seconds to enter your zip code to gain access to the system's free, no-obligation quotes. It’s really that simple!</p>
+   <span class="benefits" style="margin-top: 30px; font-family: 'Poppins', sans-serif; text-align: center; display: block;">How Do I Compare Roof Replacement Quotes? 
+   </span><br>
+   <p style="font-size: 22px; line-height: 1.9; color:rgb(0, 45, 108) ;"><strong>Step 1:</strong> Click your state on the map below to instantly check your zip code for free.    </p>
+   <p style="font-size: 22px; line-height: 1.9; color:rgb(0, 45, 108) ;"><strong>Step 2:</strong> Once you enter your zip code and home information, you will be able to compare window replacement quotes from local contractors immediately. It's really that easy! </p>
+   <div class="image-section">
+   <img src="images/map.png" alt="Roof Before and After" class="roof-image" style="width: 75%;">
+</div>
+<div style="text-align: center;">
+<button class="cta-button">Enter Your Zip Code to Get FREE Quotes &gt;&gt;</button>
+</div>
+<br><br>
+</div>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2024 - AmericanHomesToday.com</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
